@@ -5,28 +5,27 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thangkieu/react-sly-wrapper"
+    "url": "https://github.com/D-Hartley/react-sly-wrapper"
   },
   "scripts": {
-    "dev": "webpack -d --watch --color --config webpack.config.babel.js",
-    "build": "webpack --color --config webpack.config.production.babel.js",
-    "test": "test"
+    "watch": "webpack -d --watch --color --config webpack.config.babel.js",
+    "build": "webpack --color --config webpack.config.production.babel.js"
   },
   "keywords": [
     "sly",
     "react-sly"
   ],
-  "author": "Thang Kieu",
+  "author": "David Hartley",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
     "create-react-class": "^15.6.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "babel-loader": "^7.1.1",
-    "babel-register": "^6.24.1",
     "webpack": "^3.5.1"
   },
   "dependencies": {

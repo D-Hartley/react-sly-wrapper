@@ -15,6 +15,7 @@ class ReactSly extends React.PureComponent {
     this.frame = null;
     this.sly = null; // ref of root el
   }
+
   componentDidMount() {
     if (!this.frame) {
       options.prevPage = this.sly.querySelector('.sly-button-prev');
@@ -62,6 +63,6 @@ ReactSly.propTypes = {
 
 ReactSly.defaultProps = {
   itemsPerRow: ITEMS_PER_ROW
-}
+};
 
 export default ReactSly;
