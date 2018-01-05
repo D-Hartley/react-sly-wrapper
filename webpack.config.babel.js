@@ -1,5 +1,3 @@
-import webpack from 'webpack';
-
 export default {
   devtool: 'source-map',
   entry: {
@@ -11,8 +9,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.js?$/,
-        exclude: /node_modules/,
+        test: /\.js$/,
         loader: 'babel-loader'
       }
     ]

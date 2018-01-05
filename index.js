@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import DEFAULT_OPTIONS from './options';
-import 'jquery';
-import 'sly/dist/sly';
+import Sly from 'slyer';
 
 const ITEMS_PER_ROW = 5;
 
@@ -18,6 +17,7 @@ class ReactSly extends React.PureComponent {
 
   componentDidMount() {
     if (!this.frame) {
+      let options = {};
       options.prevPage = this.sly.querySelector('.sly-button-prev');
       options.nextPage = this.sly.querySelector('.sly-button-next');
       const containerWidth = this.sly.offsetWidth;
