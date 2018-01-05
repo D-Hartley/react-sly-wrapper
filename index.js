@@ -13,6 +13,7 @@ class ReactSly extends React.PureComponent {
     // instance of sly
     this.frame = null;
     this.sly = null; // ref of root el
+    this.resizeHandler = this.resizeHandler.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +40,12 @@ class ReactSly extends React.PureComponent {
       this.frame.reload();
     }
     window.addEventListener('resize', this.resizeHandler, true);
+  }
+
+  resizeHandler() {
+    if (this.frame) {
+      this.frame.reload();
+    }
   }
 
   componentWillUnmount() {
